@@ -117,11 +117,11 @@ int main() {
          adjMatrix[i][j] = 0;
    }
 
-   addVertex('S');   // 0
-   addVertex('A');   // 1
-   addVertex('B');   // 2
-   addVertex('C');   // 3
-   addVertex('D');   // 4
+   addVertex('0');   // 0
+   addVertex('1');   // 1
+   addVertex('2');   // 2
+   addVertex('3');   // 3
+   addVertex('4');   // 4
 
    addEdge(0, 1);    // S - A
    addEdge(0, 2);    // S - B
