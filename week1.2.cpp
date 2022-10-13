@@ -116,18 +116,18 @@ int main() {
          adjMatrix[i][j] = 0;
    }
 
-   addVertex('S');   // 0
-   addVertex('A');   // 1
-   addVertex('B');   // 2
-   addVertex('C');   // 3
-   addVertex('D');   // 4
+   addVertex('0');   // 0
+   addVertex('1');   // 1
+   addVertex('2');   // 2
+   addVertex('3');   // 3
+   addVertex('4');   // 4
 
-   addEdge(0, 1);    // S - A
-   addEdge(0, 2);    // S - B
-   addEdge(0, 3);    // S - C
-   addEdge(1, 4);    // A - D
-   addEdge(2, 4);    // B - D
-   addEdge(3, 4);    // C - D
+   addEdge(0, 1);   
+   addEdge(0, 2);    
+   addEdge(0, 3);    
+   addEdge(1, 4);    
+   addEdge(2, 4);    
+   addEdge(3, 4);    
 
    printf("\nTim kiem theo chieu rong: ");
 
