@@ -1,0 +1,30 @@
+Để đơn giản trong cách tiếp cận giải bài toán, người ta giả định chỉ có ô trống trong bảng là di chuyển đến những vị trí khác. Như vậy tại một trạng thái thì chỉ có tối đa 4 cách đi để chuyển sang trạng thái khác (trái, phải, lên, xuống). Người ta cũng nhận ra được rằng để có thể chuyển từ 1 trạng thái bất kì về trạng thái đích như trên thì trạng thái đầu đó phải theo một quy luật mà tôi trình bày sau đây.
+
+Cho trạng thái đầu tiên như hình dưới, duyệt qua từng ô theo thứ tự từ trái qua và từ trên xuống, ở mỗi ô số duyệt đến, bạn hãy đếm xem có bao nhiêu ô số có giá trị bé hơn nó.
+
+ n puzzle : Tìm hiểu về cách giải bài toán 
+
+Trạng thái bắt đầu 8-puzzle
+
+–       Đầu tiên là ô số 4, ta thấy có 3 ô số {1;3;2} nằm phía sau và bé hơn nó nên n1 = 3
+
+–       Tiếp đến là ô số 8 có 6 ô nhỏ hơn là {1;6;3;2;7;5}, vậy n2 = 6
+
+–       Ô số 1 là bé nhất nên n3=0
+
+–       Tương tự ô số 6, n4=3
+
+–       Ô số 3, n5=1
+
+–       Ô số 2, n6=0
+
+–       Ô số 7, n7=1
+
+–       Ô cuối luôn bằng 0 nên có thể bỏ qua, n8=0
+Tính N :8-puzzle
+
+Tính tổng các số từ n1->n8 ta có:
+
+N = 3 + 6 + 0 + 3 + 1 + 0 + 1 + 0 = 14
+
+Với số N này ta chỉ cần biết 1 thông tin là nó có chia hết cho 2 hay không (lẻ hay chẵn). Nếu nó là số chẵn thì chắc chắn có thể chuyển về trạng thái đích từ trạng thái hiện tại này. Bởi vì khi di chuyển ô trống với hướng đi bất kì thì giá trị N mod 2 cũng không thay đổi. Tức là từ trạng thái đích bạn có thể xáo trộn bằng cách di chuyển ô trống nhiều lần thì giá trị N vẫn là số chẵn.
